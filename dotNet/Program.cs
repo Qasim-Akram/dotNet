@@ -32,7 +32,7 @@ namespace dotNet
             int column = Convert.ToInt32(Console.ReadLine()); 
             Console.WriteLine("Enter the symbol");
             char symbol = Convert.ToChar(Console.ReadLine());
-
+            //simple rectangle
             for (int i = 0;i <= row;i++)
             {
                 for(int j = 0;j < column; j++)
