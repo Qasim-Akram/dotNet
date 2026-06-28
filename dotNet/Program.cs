@@ -26,7 +26,7 @@ namespace dotNet
             double c = Math.Sqrt((a*a)+(b*b));
             Console.WriteLine("Your result is : "+c);*/
 
-            Console.WriteLine("Enter the number of row: ");
+            /*Console.WriteLine("Enter the number of row: ");
             int row = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine("Enter the number of colums: ");
             int column = Convert.ToInt32(Console.ReadLine()); 
@@ -40,7 +40,56 @@ namespace dotNet
                     Console.Write(symbol);
                 }
                 Console.WriteLine();
+            }*/
+
+            //gussing game
+            Random random = new Random();
+            int min=1;
+            int max=100;
+            bool isplaying = true;
+            int guess;
+            int number;
+            int guesses;
+            String response;
+
+            while (isplaying)
+            {
+                guess = 0;
+                guesses = 0;
+                number = random.Next(min, max+1);
+                Console.WriteLine("Guess the number between " + min + " and " + max + ": ");
+
+                while (guess != number)
+                {
+                    guess = Convert.ToInt32(Console.ReadLine());
+                    Console.WriteLine("Guess " + guess);
+
+                    if (guess > number)
+                    {
+                        Console.WriteLine("Guess is too High try smaller number!");
+                    }
+                    else if(guess < number)
+                    {
+                        Console.WriteLine("Guess is too small try bigger number!");
+                    }
+                    guesses++;
+
+                }
+                Console.WriteLine("\nConragulations! You Guessed it Right \n You took  " + guesses + " Guesses");
+                Console.WriteLine("Do you wanna playagain (Y/N) :");
+                response = Console.ReadLine();
+                response = response.ToUpper();
+                if(response == "Y")
+                {
+                    isplaying = true;
+                }
+                else
+                {
+                    isplaying = false;
+                }
             }
+            Console.WriteLine("Thanks for Playing!");
+
         }
     } 
 } 
