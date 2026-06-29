@@ -43,7 +43,7 @@ namespace dotNet
             }*/
 
             //gussing game
-            Random random = new Random();
+            /*Random random = new Random();
             int min=1;
             int max=100;
             bool isplaying = true;
@@ -89,6 +89,8 @@ namespace dotNet
                 }
             }
             Console.WriteLine("Thanks for Playing!");
+            */
+            //rock,paper,scissors game
 
         }
     } 
