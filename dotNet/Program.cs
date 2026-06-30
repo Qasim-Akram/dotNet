@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Numerics;
+using System.Security.Cryptography.X509Certificates;
 namespace dotNet
 {
     class Program
@@ -91,6 +93,32 @@ namespace dotNet
             Console.WriteLine("Thanks for Playing!");
             */
             //rock,paper,scissors game
+
+            //arrays
+
+            /* String[] cars = {"BMW","Audi","Mercedes","Toyota","Honda"};
+             int size = cars.Length;
+             Console.WriteLine(size);
+             for (int i = 0; i < cars.Length; i++)
+             {
+                 Console.WriteLine(cars[i]);
+             }*/
+
+            Console.WriteLine(Checkout(30, 78.4, 852)); 
+               
+            //using params - a single dimentional array as  a parameter
+           static double Checkout(params double[] prices)
+            {
+                double total = 0;
+
+                foreach(double price in prices)
+                {
+                    total += price;
+                }
+
+                return total;
+            }
+            
 
         }
     } 
